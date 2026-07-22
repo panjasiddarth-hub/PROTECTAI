@@ -3,6 +3,11 @@
 ProtectAI is a **simulation-first industrial safety intelligence platform** that detects compound risk by combining work permits, environmental events, plant zones, historical incidents, compliance evidence and software-based CCTV/PPE observations.
 
 > **Prototype status:** ProtectAI MVP is a software-defined digital-plant demonstration. It does not connect to physical IoT sensors, live industrial control systems or certified emergency shutdown equipment.
+> <img width="1532" height="672" alt="image" src="https://github.com/user-attachments/assets/582aff23-4c57-4106-864d-14ff85c80c85" />
+<img width="1535" height="686" alt="image" src="https://github.com/user-attachments/assets/e7a15c9b-c0f4-4218-a0ae-fe407bc7ea5a" />
+<img width="1536" height="685" alt="image" src="https://github.com/user-attachments/assets/dc4c4ce1-0a58-483a-9a60-872a0081d4b2" />
+<img width="1535" height="863" alt="image" src="https://github.com/user-attachments/assets/4884c8f5-e54b-49ca-aeee-a202aaad4113" />
+
 
 ## Why ProtectAI?
 
@@ -65,7 +70,8 @@ The system explains the contributing evidence and proposes human-approved action
 
 The Vision Lab accepts a software CCTV frame or a public PPE dataset image. It can run a deterministic mock event without a trained model, or call the optional Python Vision Agent service.
 
-![Vision Lab mock PPE event](docs/vision-lab-mock-event.png)
+<img width="1050" height="460" alt="image" src="https://github.com/user-attachments/assets/e9bdc2a0-508b-4efb-80be-11925fe678f3" />
+
 
 The screenshot shows a mock PPE event with:
 
