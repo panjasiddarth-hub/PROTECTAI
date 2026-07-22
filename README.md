@@ -248,4 +248,4 @@ ProtectAI is a decision-support prototype. It does not control real machinery, e
 
 ## License
 
-This project is currently a hackathon prototype. Add the project license and dataset licenses before public or commercial redistribution.
+This project is currently a hackathon prototype. 
