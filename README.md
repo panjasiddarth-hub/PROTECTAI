@@ -4,8 +4,6 @@ ProtectAI is a **simulation-first industrial safety intelligence platform** that
 
 > **Prototype status:** ProtectAI MVP is a software-defined digital-plant demonstration. It does not connect to physical IoT sensors, live industrial control systems or certified emergency shutdown equipment.
 
-![ProtectAI Web Page Map](docs/protectai_webpage_map.png)
-
 ## Why ProtectAI?
 
 Industrial safety systems often monitor individual hazards separately:
@@ -234,8 +232,7 @@ The current prototype does **not** claim verified live industrial performance, c
 Detailed submission documentation is available in:
 
 ```text
-docs/ProtectAI_Hackathon_Technical_Documentation.docx
-HACKATHON_DEMO_GUIDE.md
+docs/ProtectAI_Technical_Documentation.docx
 ```
 
 The technical document includes the architecture, agent design, risk model, implementation, evaluation plan, limitations, local setup and demo script.
