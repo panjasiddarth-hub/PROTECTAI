@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #06090f;
+  --color-canvas-2: #0a0e14;
+  --color-canvas-3: #0f141b;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    background: var(--color-canvas);
+    color: rgb(228 228 231);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.25);
+    color: rgb(236 254 255);
+  }
+
+  /* Scrollbars */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(63, 63, 70, 0.6);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(82, 82, 91, 0.8);
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Subtle industrial backdrop — dim radial highlight behind the app */
+  .bg-app-canvas {
+    background-color: var(--color-canvas);
+    background-image:
+      radial-gradient(ellipse 60% 50% at 50% -10%, rgba(34, 211, 238, 0.08), transparent 70%),
+      radial-gradient(ellipse 50% 60% at 100% 0%, rgba(99, 102, 241, 0.06), transparent 60%),
+      radial-gradient(ellipse 70% 40% at 0% 100%, rgba(16, 185, 129, 0.04), transparent 70%);
+  }
+
+  /* Glassmorphism surface — used for cards, sidebar, top nav */
+  .surface-glass {
+    background: linear-gradient(180deg, rgba(24, 28, 36, 0.55), rgba(15, 19, 26, 0.55));
+    border: 1px solid rgba(63, 63, 70, 0.45);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .surface-glass-strong {
+    background: linear-gradient(180deg, rgba(24, 28, 36, 0.75), rgba(15, 19, 26, 0.7));
+    border: 1px solid rgba(63, 63, 70, 0.5);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(63, 63, 70, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(63, 63, 70, 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 50%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    70% { transform: scale(1.4); opacity: 0; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .pulse-ring::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border: 2px solid currentColor;
+    animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes live-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .live-dot {
+    animation: live-dot 1.6s ease-in-out infinite;
+  }
+
+  /* Subtle scanline pattern for "live" video tiles */
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+}
