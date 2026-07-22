@@ -79,7 +79,6 @@ The screenshot shows a mock PPE event with:
 - PPE compliance estimate
 - Vision risk estimate
 - Model confidence
-- A simulated missing-helmet violation
 
 ## Architecture
 
